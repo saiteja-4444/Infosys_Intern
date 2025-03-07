@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Fraud Aadhaar Detection</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRxp3boQ_bYvCBCvWLwqe-5g3YksR4_mchZA&s"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="/static/styles.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      .carousel-item img {
+        width: 100%;
+        height: auto;
+      }
+      .navbar-brand img {
+        height: 40px;
+      }
+      .navbar {
+        background: linear-gradient(
+          to right,
+          #0b0b5f,
+          #2cbaf1
+        ); /* Gradient from dark blue to light blue */
+      }
+      .navbar-nav .nav-link {
+        color: #fff !important; /* White text for better visibility */
+      }
+      .navbar-nav .nav-link:hover {
+        color: #ffdf00 !important; /* Yellow text on hover */
+      }
+      section {
+        padding: 60px 0;
+      }
+      #landing {
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        text-align: center;
+      }
+      #aadhaar-status {
+        background: #f8f9fa;
+        padding: 20px;
+      }
+      #about-uidai,
+      #use-of-ai {
+        padding: 20px;
+      }
+      #about-uidai .row,
+      #use-of-ai .row {
+        align-items: center;
+      }
+      #about-uidai img,
+      #use-of-ai img {
+        width: 500px; /* Fixed width */
+        height: 300px; /* Fixed height */
+        object-fit: cover; /* Ensure images maintain aspect ratio */
+        border-radius: 10px;
+      }
+      #contact-support {
+        background: #e9ecef;
+        padding: 20px;
+      }
+      .btn-modern {
+        background: linear-gradient(to right, #00bcd4, #0097a7);
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .btn-modern:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+      @media (max-width: 768px) {
+        #about-uidai img,
+        #use-of-ai img {
+          width: 100%; /* Full width on smaller screens */
+          height: auto; /* Auto height to maintain aspect ratio */
+          margin-top: 20px; /* Add space between content and image */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://uidai.gov.in/images/logo/aadhaar_english_logo.svg"
+            alt="Aadhaar Logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#landing"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about-uidai">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#use-of-ai"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact-support">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <!-- <div class="carousel-item active">
+                <img src="https://uidai.gov.in/images/images/banner/DocumentUpdateBanner.jpg" class="d-block w-100" alt="Document Update">
+            </div> -->
+        <div class="carousel-item">
+          <img
+            src="https://uidai.gov.in/images/banner/3_My_Aadhaar_Portal_banner_1280x433_2021_2_copy.jpg"
+            class="d-block w-100"
+            alt="My Aadhaar Portal"
+          />
+        </div>
+        <!-- <div class="carousel-item">
+                <img src="https://uidai.gov.in/images/banner/Bhuvan-APP_-banner.jpg" class="d-block w-100" alt="Bhuvan App">
+            </div> -->
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <section id="aadhaar-status">
+      <div class="container">
+        <h2>Aadhaar Analysis</h2>
+        <form id="upload-form" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="zipfile" class="form-label">Upload ZIP File</label>
+            <input
+              type="file"
+              class="form-control"
+              name="zipfile"
+              id="zipfile"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="excelfile" class="form-label">Upload Excel File</label>
+            <input
+              type="file"
+              class="form-control"
+              name="excelfile"
+              id="excelfile"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-modern">Upload</button>
+        </form>
+        <div class="mt-5">
+          <button class="btn btn-modern" onclick="downloadResults()">
+            Download Results
+          </button>
+        </div>
+        <div id="visualization" class="mt-5">
+          <img
+            src="/static/results/analysis.png"
+            class="img-fluid"
+            style="width: 75%; height: 75%"
+          />
+        </div>
+        <div id="results" class="mt-4"></div>
+      </div>
+    </section>
+
+    <section id="about-uidai">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>About UIDAI</h2>
+            <p>
+              The Unique Identification Authority of India (UIDAI) is a
+              statutory authority established to issue Unique Identification
+              Numbers (UID), known as Aadhaar, to all residents of India.
+              Aadhaar is a 12-digit unique identity number that serves as proof
+              of identity and address, anywhere in India.
+            </p>
+            <p>
+              UIDAI was established in 2009 under the Ministry of Electronics
+              and Information Technology. Its primary objective is to provide a
+              unique identity to every resident of India, ensuring inclusivity
+              and reducing fraud. Aadhaar is used for various purposes,
+              including government subsidies, banking, and mobile connections.
+            </p>
+            <p>
+              The Aadhaar system is designed to be secure, scalable, and robust,
+              leveraging advanced technologies to ensure the integrity of the
+              data. UIDAI also ensures that the data is protected through
+              stringent security measures and encryption protocols.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIRTNP1dcUIA5kmlXgP842yC7DvhggTxOC_w&s"
+              alt="UIDAI Image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="use-of-ai">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Use of AI</h2>
+            <p>
+              Artificial Intelligence (AI) plays a crucial role in enhancing the
+              security and efficiency of the Aadhaar system. By integrating AI,
+              UIDAI can detect and prevent fraudulent activities in real-time,
+              ensuring the integrity of the Aadhaar database.
+            </p>
+            <p>
+              AI algorithms are used for biometric verification, anomaly
+              detection, and pattern recognition. These technologies help in
+              identifying duplicate or fake Aadhaar entries, ensuring that only
+              genuine residents are issued Aadhaar numbers.
+            </p>
+            <p>
+              Additionally, AI-powered systems can analyze large datasets to
+              identify trends and potential security threats. This proactive
+              approach helps UIDAI stay ahead of fraudsters and maintain the
+              trust of millions of Aadhaar users.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnkr7EvXLAaj8LPfX7y5tvBMHJHZTw0t1ILA&s"
+              alt="AI Image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-support">
+      <div class="container">
+        <h2>Contact & Support</h2>
+        <p>
+          For any inquiries or support, please reach out to us at
+          <a href="mailto:support@aadhaar-fraud.com">support@uidai.com</a>.
+        </p>
+      </div>
+    </section>
+
+    <footer
+      class="text-white text-center py-5"
+      style="
+        background: linear-gradient(rgba(0, 0, 139, 0.7), rgba(0, 0, 139, 0.7)),
+          url('https://c8.alamy.com/comp/2DFDDR6/happy-indian-family-of-farmer-in-agricultural-field-2DFDDR6.jpg')
+            no-repeat center center;
+        background-size: cover;
+        padding: 60px 0;
+      "
+    >
+      <p>
+        &copy; 2025 AI-based Fraud Management System for UID Aadhaar. All rights
+        reserved.
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/index.js"></script>
+    <script>
+      // Auto-rotate carousel every 1.5 seconds
+      $(document).ready(function () {
+        $("#carouselExampleControls").carousel({
+          interval: 1500,
+        });
+      });
+    </script>
+  </body>
+</html>

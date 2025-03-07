@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+  #landing {
+    background-image: url('/static/automate.jpg');
+    background-size: cover;
+    background-position: center;
+    font-weight:1900;
+    padding: 50px 0;
+    color: white;
+}
+#landing h1, #landing p {
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+}
+  header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  header a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+  }
+
+  section {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  #landing {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #app {
+    background: #e8f5e9;
+  }
+  #about {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    width: 100%;
+    text-align:center;  /* To justify the text across the width */
+    font-size: 1rem;      /* Adjust the font size to a standard paragraph size */
+    line-height: 1.6;     /* Improved line spacing for readability */
+}
+
+#about h2{
+  text-align: center;
+}
+#about p{
+  text-align: justify;
+}
+
+  #contact {
+    background: #fff3e0;
+  }
+
+  h1, h2 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  button {
+    padding: 0.8rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+  }
+  #about {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .workflow h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #4CAF50;
+  }
+  
+  .step {
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .step h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .step p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .step ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .step ul li {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+  }
+
+  a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
