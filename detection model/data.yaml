@@ -1,0 +1,8 @@
+path: "C:/Users/rakes/OneDrive/Desktop/Infosys_Training/Detection model/data.yaml"
+train: "C:/Users/rakes/OneDrive/Desktop/Infosys_Training/Detection model/detection_dataset/images/train"
+val: "C:/Users/rakes/OneDrive/Desktop/Infosys_Training/Detection model/detection_dataset/images/val"
+
+names:
+  0: name
+  1: uid
+  2: address
