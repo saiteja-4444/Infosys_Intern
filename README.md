@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="https://your-image-link.com/banner.jpg" alt="Project Banner">
+  <img src="https://github.com/user-attachments/assets/7a6d4988-738f-4f17-ad5a-0f77e364dfad" alt="Project Banner">
 </p>
 
 ## 🌟 Overview
