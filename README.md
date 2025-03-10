@@ -1,8 +1,19 @@
-<h1 align="center"> AI-based Fraud Management System for UID Aadhar</h1>
+<h1 align="center">AI-based Fraud Management System for UID Aadhar</h1>
 
-## This is a team project made under Infosys Sringboard Internship 5.0, initiative by Infosys Springboard with mentor led guidance
+<p align="center">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
+  <img src="https://img.shields.io/badge/Infosys-Springboard-brightgreen.svg" alt="Infosys Springboard">
+  <img src="https://img.shields.io/badge/Status-Completed-success.svg" alt="Status">
+</p>
 
-## Table of Contents
+<p align="center">
+  <img src="https://your-image-link.com/banner.jpg" alt="Project Banner">
+</p>
+
+## 🌟 Overview
+This team project was developed under the **Infosys Springboard Internship 5.0** with mentor-led guidance. Our goal was to create a secure and efficient **AI-based Fraud Management System** for document verification.
+
+## 📜 Table of Contents
 1. [Introduction](#introduction)
 2. [Features](#features)
 3. [Technologies Used](#technologies-used)
@@ -14,14 +25,14 @@
 
 ---
 
-## Introduction
-The **AI-based Fraud Management System** is a Flask-based web application designed to automate document verification and detect fraudulent activities. It uses AI models to classify documents (Aadhaar vs. non-Aadhaar), extract text using OCR, and verify the authenticity of the document by comparing extracted details with a database.
+## 🔍 Introduction
+The **AI-based Fraud Management System** is a Flask-based web application designed to automate document verification and detect fraudulent activities. Using advanced AI models, it classifies documents (e.g., Aadhaar) and ensures their authenticity.
 
 This project was developed as part of the **Infosys Springboard Internship** to address the growing need for secure and efficient document verification systems.
 
 ---
 
-## Features
+## ✨ Features
 - **Document Classification**: Classifies uploaded documents as **Aadhaar** or **non-Aadhaar** using the YOLOv11n-cls model.
 - **OCR Text Extraction**: Extracts text (e.g., UID, name, address) from Aadhaar documents using EasyOCR.
 - **Fraud Detection**: Verifies the extracted details against a database to detect mismatches or inconsistencies.
@@ -30,7 +41,7 @@ This project was developed as part of the **Infosys Springboard Internship** to 
 
 ---
 
-## Technologies Used
+## 🛠 Technologies Used
 - **Frontend**: HTML, CSS, JavaScript, Bootstrap
 - **Backend**: Flask (Python)
 - **AI/ML Models**:
@@ -41,43 +52,50 @@ This project was developed as part of the **Infosys Springboard Internship** to 
 
 ---
 
-## Usage  
+## 🚀 Usage
 
-### 📤 Upload a Document:  
-1. Go to the **web interface** and upload a document (image or PDF).  
+### Upload a Document
+1. Go to the **web interface** and upload a document (image or PDF).
 
-### 📊 View Results:  
-- The system will **classify the document**, extract text, and verify its authenticity.  
-- Results will be displayed as **Accepted** or **Rejected**.  
-
----
-
-## Workflow  
-
-1️⃣ **User Uploads Document**: The user uploads a document via the web interface.  
-2️⃣ **Document Classification**: The system classifies the document as **Aadhaar or non-Aadhaar**.  
-3️⃣ **OCR Text Extraction**: If the document is classified as Aadhaar, the system extracts text using **OCR (Optical Character Recognition)**.  
-4️⃣ **Database Verification**: The extracted details are compared against a **database**.  
-5️⃣ **Fraud Detection**: The system checks for **inconsistencies or mismatches**.  
-6️⃣ **Result Display**: The system displays whether the document is **Accepted or Rejected**.  
+### View Results
+- The system will **classify the document**, extract text, and verify its authenticity.
+- Results will be displayed as **Accepted** or **Rejected**.
 
 ---
 
-## Results  
+## 🔄 Workflow
 
-✅ **Document Classification Accuracy**: **98.4%** (on validation set).  
-✅ **Fraud Detection**: Successfully detects **mismatches** in UID and other details.  
-✅ **User Interface**: Clean and intuitive **design** for easy document upload and result display.  
+1. **User Uploads Document**: The user uploads a document via the web interface.
+2. **Document Classification**: The system classifies the document as **Aadhaar or non-Aadhaar**.
+3. **OCR Text Extraction**: If the document is classified as Aadhaar, the system extracts text using **OCR (Optical Character Recognition)**.
+4. **Database Verification**: The extracted details are compared against a **database**.
+5. **Fraud Detection**: The system checks for **inconsistencies or mismatches**.
+6. **Result Display**: The system displays whether the document is **Accepted or Rejected**.
 
 ---
 
-## Future Scope  
+## 📈 Results
 
-🚀 **Support for More Document Types**: Add support for **PAN cards, passports**, etc.  
-🚀 **Improved OCR Accuracy**: Enhance OCR for **handwritten text** and **low-quality images**.  
-🚀 **Cloud Deployment**: Deploy the system on **cloud platforms** for wider accessibility.  
-🚀 **Integration with Government Databases**: Enable **real-time verification** with official databases.  
+- **Document Classification Accuracy**: **98.4%** (on validation set).
+- **Fraud Detection**: Successfully detects **mismatches** in UID and other details.
+- **User Interface**: Clean and intuitive **design** for easy document upload and result display.
 
+---
 
-## License  
+## 🌍 Future Scope
+
+- **Support for More Document Types**: Add support for **PAN cards, passports**, etc.
+- **Improved OCR Accuracy**: Enhance OCR for **handwritten text** and **low-quality images**.
+- **Cloud Deployment**: Deploy the system on **cloud platforms** for wider accessibility.
+- **Integration with Government Databases**: Enable **real-time verification** with official databases.
+
+---
+
+## 📄 License
 This project is licensed under the **MIT License** – see the [LICENSE](./LICENSE) file for details.
+
+---
+
+<p align="center">
+  Made with ❤️ by the Infosys Springboard Internship Team
+</p>
