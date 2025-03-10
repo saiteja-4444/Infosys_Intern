@@ -1,4 +1,4 @@
-<h1 align="center">AI-based Fraud Management System for UID Aadhar</h1>
+<h1 align="center">Al-based Fraud Management System for UID Aadhaar Using AI-OCR</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
