@@ -1,4 +1,4 @@
-<h1 align="center">Al-based Fraud Management System for UID Aadhaar Using AI-OCR</h1>
+<h1 align="center">AI-based Fraud Management System for UID Aadhaar Using AI-OCR</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
@@ -11,7 +11,7 @@
 </p>
 
 ## 🌟 Overview
-This team project was developed under the **Infosys Springboard Internship 5.0** with mentor-led guidance. Our goal was to create a secure and efficient **AI-based Fraud Management System** for document verification.
+This team project was developed under the **Infosys Springboard Internship 5.0** with mentor-led guidance. Our goal was to create a secure and efficient **AI-based Fraud Management System** for document verification using advanced AI-OCR technologies.
 
 ## 📜 Table of Contents
 1. [Introduction](#introduction)
@@ -26,7 +26,7 @@ This team project was developed under the **Infosys Springboard Internship 5.0**
 ---
 
 ## 🔍 Introduction
-The **AI-based Fraud Management System** is a Flask-based web application designed to automate document verification and detect fraudulent activities. Using advanced AI models, it classifies documents (e.g., Aadhaar) and ensures their authenticity.
+The **AI-based Fraud Management System** is a Flask-based web application designed to automate document verification and detect fraudulent activities. Using advanced AI models, it classifies documents and extracts text for verification.
 
 This project was developed as part of the **Infosys Springboard Internship** to address the growing need for secure and efficient document verification systems.
 
@@ -42,7 +42,7 @@ This project was developed as part of the **Infosys Springboard Internship** to 
 ---
 
 ## 🛠 Technologies Used
-- **Frontend**: HTML, CSS, JavaScript, Bootstrap
+- **Frontend**: HTML, CSS, JavaScript
 - **Backend**: Flask (Python)
 - **AI/ML Models**:
   - YOLOv11n-cls (Document Classification)
